@@ -1,0 +1,6 @@
+@import "tailwindcss";
+
+/* Base tweaks */
+* { box-sizing: border-box; }
+html, body, #root { height: 100%; }
+body { @apply m-0 bg-gradient-to-b from-gray-900 via-black to-gray-900 text-white font-sans; }

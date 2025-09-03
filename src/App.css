@@ -1,0 +1,55 @@
+@tailwind utilities;
+
+.app-container { @apply max-w-[1100px] mx-auto p-6; }
+.header h1 { @apply m-0 mb-1 text-2xl font-semibold; }
+.header p { @apply m-0 mb-4 text-slate-400; }
+
+.controls { @apply bg-slate-900/50 border border-slate-700/60 rounded-xl p-4 grid gap-3; }
+.search-row { @apply grid gap-3; grid-template-columns: 140px 1fr 160px; }
+.filters-row { @apply flex flex-wrap gap-3; }
+
+input, select, button { @apply h-10 rounded-lg border border-slate-700/60 bg-slate-800 text-slate-100 px-2.5; }
+input::placeholder { color: #7d86a8; }
+
+button { @apply cursor-pointer; }
+button.primary { @apply bg-blue-400 text-slate-900 border-0; }
+button.secondary { @apply bg-slate-700; }
+button.danger { @apply bg-red-400 text-slate-900 border-0; }
+button:disabled { @apply opacity-60 cursor-not-allowed; }
+
+.inline { @apply inline-flex items-center gap-2; }
+.inline.year input { @apply w-24; }
+.inline.checkbox { @apply gap-1.5; }
+
+.meta { @apply my-3 min-h-6; }
+.status { @apply text-slate-400; }
+.status.error { @apply text-red-400; }
+.empty { @apply text-slate-400; }
+
+.results { @apply mt-2; }
+.grid { @apply list-none p-0 m-0 grid gap-3; grid-template-columns: repeat( auto-fill, minmax(240px, 1fr) ); }
+.card { @apply bg-slate-900/50 border border-slate-700/60 rounded-xl p-2 grid gap-2 items-start; grid-template-columns: 96px 1fr; }
+.cover-btn { @apply border-0 p-0 bg-transparent cursor-pointer; }
+.card img { @apply w-24 h-36 object-cover rounded-lg border border-slate-700/60; }
+.info h3 { @apply m-0 mb-1 text-base; }
+.sub { @apply m-0 mb-1.5 text-slate-400 text-sm; }
+.meta-line { @apply m-0 mb-2 text-slate-400 text-[13px]; }
+.actions { @apply flex gap-2; }
+
+.pagination { @apply flex items-center justify-center gap-3 my-4; }
+
+.modal { @apply fixed inset-0 bg-black/50 grid place-items-center p-5; }
+.modal-content { @apply bg-slate-900/50 border border-slate-700/60 rounded-xl p-4 w-full max-w-[800px] relative; }
+.modal .close { @apply absolute right-2 top-2 w-8 h-8 rounded-full; }
+.desc { @apply text-slate-100 leading-relaxed; }
+
+.favorites { @apply mt-7; }
+.fav-grid { @apply grid gap-3 list-none p-0 m-0; grid-template-columns: repeat( auto-fill, minmax(220px, 1fr) ); }
+.fav-card { @apply bg-slate-900/50 border border-slate-700/60 rounded-xl p-2.5 grid gap-2.5 items-center; grid-template-columns: 64px 1fr auto; }
+.fav-card img { @apply w-16 h-24 object-cover rounded-md border border-slate-700/60; }
+.fav-title { @apply m-0 text-[15px]; }
+.fav-sub { @apply mt-1 text-slate-400 text-[13px]; }
+
+@media (max-width: 720px) {
+  .search-row { grid-template-columns: 1fr; }
+}
